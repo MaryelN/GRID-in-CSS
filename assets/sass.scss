@@ -1,3 +1,22 @@
-body {
-  background: tomato;
+.container {
+  /*Init of the grid*/
+  display: grid;
+  //Define the Grid responsive
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  //Depasing the viewport and making a bar
+  grid-template-columns: 25% 25% 25% 50%;
+  //Grid responsive fr = free remaining calculates the space
+  grid-template-columns: 30vw 1fr 1fr 1fr 1fr;
+  //To repeat a value
+  grid-template-columns: 50px repeat(2, 1fr) 1fr 25vw;
+  //we can convine all the values in the grid
+
+  //GRID Template rows fr will calculate the sapce based in the content height if the height of the container is not defined
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 5px;
+  //To define both gaps
+  gap: 15px;
+
+
 }
