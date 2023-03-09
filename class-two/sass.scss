@@ -1,0 +1,95 @@
+
+
+body{
+  background-color: rgb(255, 247, 135);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 100px);
+}
+//Grid-Column-start/end defines the space that the div child will take inside of the container
+.cell-1 {
+  background-color: rgb(204, 102, 119);
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+//Its pushed outside because the column are not defined
+.cell-2 {
+  background-color: aqua;
+  //grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+//Definin all the 4 values will allow us to define the specific place of our elements
+.cell-3 {
+  background-color: rgb(250, 126, 110);
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+//If we dont define the start and end from the same element they will be pushed and placed in the space available between its neightboors
+.cell-4 {
+  background-color: rgb(0, 26, 255);
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.cell-5 {
+  background-color: purple;
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+.cell-6 {
+  background-color: greenyellow;
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+//To reagroup in one property 
+.cell-7 {
+  background-color: black;
+  grid-column: 1 / span 3;
+  grid-row: 4 / 5;
+}
+/* We can superpose elements in the grid
+.cell-8 {
+  background-color: azure;
+  opacity: 0.75;
+  position: absolute;
+  //we need to give it values otherwise our element will be transparent
+  width: 50%;
+  height: 50px;
+  grid-row:  1 / span 2;
+  grid-column: 1 / span 1;
+}
+*/
+.cell-8 {
+  background-color: azure;
+  opacity: 0.50;
+  grid-row:  1 / span 2;
+  grid-column: 1 / span 2;
+}
+
+//-------------------------------------------------------------//
+
+.container-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 150px);
+}
+
+.help {
+  background-color: orangered;
+  opacity: 0.5;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.fixed-row {
+  grid-row: 1 / 2;
+}
